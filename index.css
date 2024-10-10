@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.game-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.game-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+    background-color: #45a049;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 2rem auto;
+    max-width: 300px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #2c2c2c;
+    border: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #3c3c3c;
+}
+
+.cell.X {
+    color: #FF5722;
+}
+
+.cell.O {
+    color: #2196F3;
+}
+
+#status, #snakeScore {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#resetTicTacToeButton, #startSnakeButton {
+    background-color: #f44336;
+}
+
+#snakeCanvas {
+    border: 2px solid #f0f0f0;
+    margin: 1rem auto;
+    display: block;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sudoku styles */
+#sudokuBoard {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #444;
+    padding: 2px;
+}
+
+.sudoku-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sudoku-cell:nth-child(3n) {
+    border-right: 2px solid #444;
+}
+
+.sudoku-cell:nth-child(9n) {
+    border-right: none;
+}
+
+.sudoku-cell:nth-child(n+19):nth-child(-n+27),
+.sudoku-cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #444;
+}
+
+.sudoku-cell.given {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.sudoku-cell.selected {
+    background-color: #3c3c3c;
+}
+
+#sudokuControls, #sudokuInput {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#sudokuControls button, #sudokuInput button {
+    margin: 0;
+}
+
+#sudokuInput {
+    flex-wrap: wrap;
+    max-width: 450px;
+    margin: 1rem auto;
+}
+
+.number-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
+#eraseSudokuButton, #solveSudokuButton {
+    background-color: #f44336;
+    width: auto;
+    padding: 0 1rem;
+}
+
+/* Remove this rule as it's no longer needed */
+/* #eraseSudokuButton {
+    margin-left: auto;
+} */
+
+.sudoku-cell.solution {
+    color: #f44336;
+}
+
+.home-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
